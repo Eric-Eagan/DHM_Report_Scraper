@@ -14,7 +14,6 @@ from tkinter import *
 from tkinter import ttk
 from tkcalendar import Calendar, DateEntry
 import os
-#import subprocess
 from shutil import rmtree
 from sys import exit
 
@@ -139,7 +138,7 @@ while(1):
       continue
     
     login_payload = {
-      'user[email]': 'mbroman@deerharbormarina.com',
+      'user[email]': {email},#email censored for security
       'user[password]': password,
       'authenticity_token': token
     }
@@ -207,8 +206,6 @@ while(1):
       temp.labeltext.set(f'"{sortby}" sorting method doesn\'t exist.')
       temp.mainloop()
       continue
-    #print(reservations)
-    #print(len(reservations))
   
   #CREATE EXCEL SPREADSHEET
   # Create a workbook and add a worksheet.
@@ -308,7 +305,6 @@ while(1):
   workbook.close()
   
   # File Management and open spreadsheet
-  #subprocess.Popen(workpath, shell=True)
   os.startfile(workpath)
   for x in os.listdir():
     dir = x.split('_')
