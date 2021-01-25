@@ -5,4 +5,4 @@ Uses TkInter UI to accept target date and password
 Accesses and processes dockwa html using Requests and BeautifulSoup
 Formats results into spreadsheet using XlsxWriter
 
-email has been censored in code for security
+email has been censored in code for security, Line 141
